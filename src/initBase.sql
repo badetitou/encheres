@@ -1,10 +1,10 @@
 -- Les articles
 INSERT INTO article VALUES ('re12', 'EN_COURS','patate', 1, 0);
-INSERT INTO article VALUES ('re13', 'NON_COMMENCE','frite', 4, 0);
-INSERT INTO article VALUES ('re14', 'NON_COMMENCE','tartiflette', 12, 0);
-INSERT INTO article VALUES ('re15', 'NON_COMMENCE','pomme de terre', 32, 0);
-INSERT INTO article VALUES ('re16', 'NON_COMMENCE','raclette', 12, 0);
-INSERT INTO article VALUES ('re17', 'NON_COMMENCE','canard', 42, 0);
+INSERT INTO article VALUES ('re13', 'NON_COMMENCEE', 'frite', 4, 0);
+INSERT INTO article VALUES ('re14', 'NON_COMMENCEE', 'tartiflette', 12, 0);
+INSERT INTO article VALUES ('re15', 'NON_COMMENCEE', 'pomme de terre', 32, 0);
+INSERT INTO article VALUES ('re16', 'NON_COMMENCEE', 'raclette', 12, 0);
+INSERT INTO article VALUES ('re17', 'NON_COMMENCEE', 'canard', 42, 0);
 
 -- Les clients
 INSERT INTO client (dtype, adressemail, pourcentage) VALUES ('Agressif', 'bateau@mer.fr',0);

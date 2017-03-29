@@ -1,0 +1,92 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+    <display-name>gestionEnchere</display-name>
+    <servlet>
+        <servlet-name>GestionEnchere</servlet-name>
+        <jsp-file>/GestionEnchere.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GestionEnchere</servlet-name>
+        <url-pattern>/GestionEnchere</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ListeEnchere</servlet-name>
+        <jsp-file>/ListeEnchere.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ListeEnchere</servlet-name>
+        <url-pattern>/ListeEnchere</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DetailArticle</servlet-name>
+        <jsp-file>/DetailArticle.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DetailArticle</servlet-name>
+        <url-pattern>/DetailArticle</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>EnregistrementArticle</servlet-name>
+        <jsp-file>/EnregistrementArticle.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EnregistrementArticle</servlet-name>
+        <url-pattern>/EnregistrementArticle</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>EnregistrementClient</servlet-name>
+        <jsp-file>/EnregistrementClient.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EnregistrementClient</servlet-name>
+        <url-pattern>/EnregistrementClient</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EtatEnchere</servlet-name>
+        <jsp-file>/EtatEnchere.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EtatEnchere</servlet-name>
+        <url-pattern>/EtatEnchere</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DemarrerEnchere</servlet-name>
+        <jsp-file>/DemarrerEnchere.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DemarrerEnchere</servlet-name>
+        <url-pattern>/DemarrerEnchere</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TerminerEnchere</servlet-name>
+        <jsp-file>/TerminerEnchere.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TerminerEnchere</servlet-name>
+        <url-pattern>/TerminerEnchere</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>InscriptionEnchere</servlet-name>
+        <jsp-file>/InscriptionEnchere.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InscriptionEnchere</servlet-name>
+        <url-pattern>/InscriptionEnchere</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FaireInscription</servlet-name>
+        <jsp-file>/FaireInscription.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FaireInscription</servlet-name>
+        <url-pattern>/FaireInscription</url-pattern>
+    </servlet-mapping>
+
+</web-app>

@@ -5,7 +5,6 @@ import ejb.entites.*;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-
 import java.sql.Timestamp;
 import java.util.Calendar;
 import java.util.Collection;
@@ -25,7 +24,7 @@ public class ServiceGestionEncheresBean implements ServiceGestionEncheresLocal, 
         } catch (ArticleInexistantException e) {
             Article article = new Article();
             article.setCode(code);
-            article.setEtatEnchere(EtatEnchere.NON_COMMENCE);
+            article.setEtatEnchere(EtatEnchere.NON_COMMENCEE);
             if(prixInitial >= 0) {
                 article.setPrixInitial(prixInitial);
             } else {
@@ -98,7 +97,7 @@ public class ServiceGestionEncheresBean implements ServiceGestionEncheresLocal, 
     @Override
     public void inscription(String email, String code, double prixMax) throws InscriptionImpossibleException, ArticleInexistantException {
         Article article = getArticle(code);
-        if (article.getEtatEnchere() != EtatEnchere.NON_COMMENCE){
+        if (article.getEtatEnchere() != EtatEnchere.NON_COMMENCEE) {
             throw new InscriptionImpossibleException();
         }
 
@@ -121,7 +120,7 @@ public class ServiceGestionEncheresBean implements ServiceGestionEncheresLocal, 
         Article article = getArticle(code);
         if (article.getEtatEnchere() == EtatEnchere.TERMINEE){
             throw new EnchereCloseException();
-        } else if (article.getEtatEnchere() == EtatEnchere.NON_COMMENCE){
+        } else if (article.getEtatEnchere() == EtatEnchere.NON_COMMENCEE) {
             throw new EnchereNonDemarreeException();
         }
         Client client = em.find(Client.class, email);

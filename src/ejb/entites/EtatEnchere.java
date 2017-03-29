@@ -7,7 +7,7 @@ import java.io.Serializable;
  */
 
 public enum EtatEnchere implements Serializable{
-    NON_COMMENCE,
+    NON_COMMENCEE,
     EN_COURS,
     TERMINEE
 }

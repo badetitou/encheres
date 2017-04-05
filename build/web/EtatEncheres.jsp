@@ -1,7 +1,7 @@
-<%@ page import="javax.naming.InitialContext" %>
-<%@ page import="ejb.sessions.ServiceGestionEncheres" %>
 <%@ page import="ejb.entites.Article" %>
 <%@ page import="ejb.entites.EtatEnchere" %>
+<%@ page import="ejb.sessions.ServiceGestionEncheres" %>
+<%@ page import="javax.naming.InitialContext" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -26,7 +26,7 @@
     <li>Nom : <a href="DetailArticle?refArticle=<%=a.getCode()%>"> <%=a.getNom()%></a>, prix initial : <%=a.getPrixInitial()%>
         EtatEnchere : <%=a.getEtatEnchere().toString()%>
         <%
-            if (a.getEtatEnchere() == EtatEnchere.NON_COMMENCE)
+            if (a.getEtatEnchere() == EtatEnchere.NON_COMMENCEE)
         %>
             Demarrer enchere : <a href="DemarrerEnchere?refArticle=<%=a.getCode()%>"/>
         <%

@@ -1,7 +1,7 @@
-<%@ page import="javax.naming.InitialContext" %>
-<%@ page import="ejb.sessions.ServiceGestionEncheres" %>
 <%@ page import="ejb.entites.Article" %>
 <%@ page import="ejb.entites.EtatEnchere" %>
+<%@ page import="ejb.sessions.ServiceGestionEncheres" %>
+<%@ page import="javax.naming.InitialContext" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -75,7 +75,7 @@
         <td><%=a.getEtatEnchere().toString()%></td>
         <td>
                 <%
-            if (a.getEtatEnchere() == EtatEnchere.NON_COMMENCE){
+            if (a.getEtatEnchere() == EtatEnchere.NON_COMMENCEE){
             %>
             <a class="waves-effect waves-circle waves-light" href="DemarrerEnchere?refArticle=<%=a.getCode()%>"><i class="material-icons">lock_open</i></a>
                 <%

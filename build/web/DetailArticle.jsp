@@ -1,7 +1,7 @@
 <%@ page import="ejb.entites.Article" %>
+<%@ page import="ejb.entites.EtatEnchere" %>
 <%@ page import="ejb.sessions.ServiceGestionEncheres" %>
 <%@ page import="javax.naming.InitialContext" %>
-<%@ page import="ejb.entites.EtatEnchere" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -72,7 +72,7 @@
                         <p>Nombre d'offre déjà effectue : <%=a.getOffres().size()%></p>
                     </div>
                     <%
-                        if(a.getEtatEnchere() == EtatEnchere.NON_COMMENCE) {
+                        if (a.getEtatEnchere() == EtatEnchere.NON_COMMENCEE) {
                     %>
                     <div class="card-action">
                         <a href="InscriptionEnchere">Encherir</a>

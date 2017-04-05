@@ -1,8 +1,5 @@
 package ejb.sessions;
 
-/**
- * Created by bverhaeg on 05/04/17.
- */
 public class EnchereDejaEnCoursException extends Exception {
 
     @Override

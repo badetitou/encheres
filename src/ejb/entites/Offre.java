@@ -1,13 +1,11 @@
 package ejb.entites;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import java.io.Serializable;
 import java.sql.Timestamp;
-import java.util.Date;
-
-/**
- * Created by badetitou on 19/03/17.
- */
 
 @Entity
 public class Offre implements Serializable, Comparable {

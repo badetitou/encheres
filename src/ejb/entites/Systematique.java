@@ -3,9 +3,7 @@ package ejb.entites;
 import javax.persistence.Entity;
 import java.io.Serializable;
 
-/**
- * Created by badetitou on 14/03/17.
- */
+
 
 @Entity
 public class Systematique extends Client implements Serializable{
@@ -15,6 +13,10 @@ public class Systematique extends Client implements Serializable{
     public Systematique() {
     }
 
+    /**
+     * @param prixActuel la valeur de la meilleur offre actuelle sur laquel on veut sur encherir
+     * @return la prix que l'on propose (prix actuel plus un pourcentage prédéfini
+     */
     @Override
     public double surenchere(double prixActuel) {
         return prixActuel + prixActuel*pourcentage/100;

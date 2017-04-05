@@ -1,12 +1,11 @@
 package ejb.entites;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.io.Serializable;
 import java.util.Set;
-
-/**
- * Created by badetitou on 14/03/17.
- */
 
 @Entity
 public abstract class Client implements Serializable {
@@ -35,5 +34,9 @@ public abstract class Client implements Serializable {
         this.acheteur = acheteur;
     }
 
+    /**
+     * @param prixActuel la valeur de la meilleur offre actuelle sur laquel on veut sur encherir
+     * @return la prix que l'on propose
+     */
     public abstract double surenchere(double prixActuel);
 }

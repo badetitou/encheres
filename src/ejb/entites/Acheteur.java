@@ -4,9 +4,6 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Set;
 
-/**
- * Created by badetitou on 19/03/17.
- */
 @Entity
 public class Acheteur implements Serializable {
     @Id

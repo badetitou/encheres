@@ -1,7 +1,7 @@
 package ejb.entites;
 
 /**
- * Created by badetitou on 19/03/17.
+ * Permet de simplifier les traitements avec les jsp
  */
 public enum TypeClient {
     CLASSIQUE,

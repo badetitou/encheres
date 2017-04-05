@@ -7,9 +7,6 @@ import ejb.entites.TypeClient;
 
 import java.util.Collection;
 
-/**
- * Created by badetitou on 19/03/17.
- */
 public interface ServiceGestionEncheres {
     void addArticle(String code, String nom, Double prixInitial)
             throws ArticleDejaExistantException, PrixInitialException;

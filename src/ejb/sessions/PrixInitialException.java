@@ -8,4 +8,9 @@ public class PrixInitialException extends Exception {
     public String getMessage() {
         return "Prix Initial < 0 interdit";
     }
+
+    @Override
+    public void printStackTrace() {
+        System.out.println(getMessage());
+    }
 }

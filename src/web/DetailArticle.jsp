@@ -72,7 +72,7 @@
                         <p>Nombre d'offre déjà effectue : <%=a.getOffres().size()%></p>
                     </div>
                     <%
-                        if (a.getEtatEnchere() == EtatEnchere.NON_COMMENCEE) {
+                        if (a.getEtatEnchere() != EtatEnchere.TERMINEE) {
                     %>
                     <div class="card-action">
                         <a href="InscriptionEnchere">Encherir</a>

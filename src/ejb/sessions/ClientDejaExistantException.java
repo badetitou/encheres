@@ -8,4 +8,9 @@ public class ClientDejaExistantException extends Exception {
     public String getMessage() {
         return "Client déjà existant";
     }
+
+    @Override
+    public void printStackTrace() {
+        System.out.println(getMessage());
+    }
 }

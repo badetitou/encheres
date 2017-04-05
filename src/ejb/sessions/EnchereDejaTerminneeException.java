@@ -1,13 +1,12 @@
 package ejb.sessions;
 
 /**
- * Created by badetitou on 23/03/17.
+ * Created by bverhaeg on 05/04/17.
  */
-public class PourcentageIncorrectException extends Exception {
-
+public class EnchereDejaTerminneeException extends Exception {
     @Override
     public String getMessage() {
-        return "Valeur pourcentage < 0 interdit";
+        return "Les enchères sont déjà terminés";
     }
 
     @Override

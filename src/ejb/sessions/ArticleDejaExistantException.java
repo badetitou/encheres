@@ -8,4 +8,9 @@ public class ArticleDejaExistantException extends Exception {
     public String getMessage() {
         return "Un article avec le même code existe déjà";
     }
+
+    @Override
+    public void printStackTrace() {
+        System.out.println(getMessage());
+    }
 }

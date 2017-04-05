@@ -67,12 +67,16 @@ public class Main {
                 e.printStackTrace();
             } catch (ArticleInexistantException e) {
                 e.printStackTrace();
+            } catch (ClientInexistantException e) {
+                e.printStackTrace();
             }
             try {
                 sge.inscription("paul.dupont@free.fr", "re12", 52);
             } catch (InscriptionImpossibleException e) {
                 e.printStackTrace();
             } catch (ArticleInexistantException e) {
+                e.printStackTrace();
+            } catch (ClientInexistantException e) {
                 e.printStackTrace();
             }
             try {
@@ -81,12 +85,16 @@ public class Main {
                 e.printStackTrace();
             } catch (ArticleInexistantException e) {
                 e.printStackTrace();
+            } catch (ClientInexistantException e) {
+                e.printStackTrace();
             }
             try {
                 sge.inscription("alain.dubois@yahoo.fr", "re12", 45);
             } catch (InscriptionImpossibleException e) {
                 e.printStackTrace();
             } catch (ArticleInexistantException e) {
+                e.printStackTrace();
+            } catch (ClientInexistantException e) {
                 e.printStackTrace();
             }
             try {
@@ -95,12 +103,16 @@ public class Main {
                 e.printStackTrace();
             } catch (ArticleInexistantException e) {
                 e.printStackTrace();
+            } catch (ClientInexistantException e) {
+                e.printStackTrace();
             }
             try {
                 sge.inscription("moi@free.fr", "re17", 300);
             } catch (InscriptionImpossibleException e) {
                 e.printStackTrace();
             } catch (ArticleInexistantException e) {
+                e.printStackTrace();
+            } catch (ClientInexistantException e) {
                 e.printStackTrace();
             }
 
@@ -109,6 +121,10 @@ public class Main {
                 sge.demarrerEnchere("re12");
                 sge.demarrerEnchere("re17");
             } catch (ArticleInexistantException e) {
+                e.printStackTrace();
+            } catch (EnchereDejaTerminneeException e) {
+                e.printStackTrace();
+            } catch (EnchereDejaEnCoursException e) {
                 e.printStackTrace();
             }
 
@@ -123,6 +139,8 @@ public class Main {
             } catch (EnchereNonDemarreeException e) {
                 e.printStackTrace();
             } catch (ArticleInexistantException e) {
+                e.printStackTrace();
+            } catch (ClientInexistantException e) {
                 e.printStackTrace();
             }
 

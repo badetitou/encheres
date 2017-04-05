@@ -49,5 +49,6 @@
     <orderEntry type="library" name="lib" level="project" />
     <orderEntry type="library" name="javax.persistence" level="project" />
     <orderEntry type="library" name="postgresql" level="project" />
+    <orderEntry type="library" name="javaee-api-7.0 (2)" level="project" />
   </component>
 </module>

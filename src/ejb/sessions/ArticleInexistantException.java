@@ -8,4 +8,9 @@ public class ArticleInexistantException extends Exception {
     public String getMessage() {
         return "Article Inexistant";
     }
+
+    @Override
+    public void printStackTrace() {
+        System.out.println(getMessage());
+    }
 }

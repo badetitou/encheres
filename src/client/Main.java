@@ -20,7 +20,7 @@ public class Main {
             System.out.println("Creation d'utilisateur");
 
             try {
-                sge.addClient("john.smith@gmail.com", TypeClient.AGRESSIF, 0);
+                sge.addClient("john.smith@gmail.com", TypeClient.AGRESSIF, 0.0);
             } catch (ClientDejaExistantException e) {
                 System.err.println("Client deja existant 1");
             } catch (PourcentageIncorrectException e) {
@@ -28,7 +28,7 @@ public class Main {
             }
 
             try {
-                sge.addClient("paul.dupont@free.fr", TypeClient.ALEATOIRE, 0);
+                sge.addClient("paul.dupont@free.fr", TypeClient.ALEATOIRE, 0.0);
             } catch (ClientDejaExistantException e) {
                 System.err.println("Client deja existant 2");
             } catch (PourcentageIncorrectException e) {
@@ -36,7 +36,7 @@ public class Main {
             }
 
             try {
-                sge.addClient("moi@free.fr", TypeClient.CLASSIQUE, 0);
+                sge.addClient("moi@free.fr", TypeClient.CLASSIQUE, 0.0);
             } catch (ClientDejaExistantException e) {
                 System.err.println("Client deja existant 3");
             } catch (PourcentageIncorrectException e) {
@@ -54,7 +54,7 @@ public class Main {
             System.out.println("*** Creation d'articles ***");
             try {
                 sge.addArticle("re12", "cactus qui pique", 12.5);
-                sge.addArticle("re17", "tablette 10 pouces", 260);
+                sge.addArticle("re17", "tablette 10 pouces", 260.0);
             } catch (ArticleDejaExistantException e) {
                 e.printStackTrace();
             } catch (PrixInitialException e) {

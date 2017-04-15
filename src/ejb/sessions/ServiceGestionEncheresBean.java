@@ -18,7 +18,7 @@ public class ServiceGestionEncheresBean implements ServiceGestionEncheresLocal, 
     private EntityManager em;
 
     /**
-     * Ajoute un article dans la base de données. L'enchère correspondant à cette article sera automatiquement
+     * Ajoute un article dans la base de données. L'enchère correspondant à cet article sera automatiquement
      * mis à l'état "NON COMMENCEE"
      *
      * @param code        le code unique de l'article

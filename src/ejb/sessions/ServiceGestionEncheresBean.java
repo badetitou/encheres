@@ -201,6 +201,7 @@ public class ServiceGestionEncheresBean implements ServiceGestionEncheresLocal, 
      */
     @Override
     public void proposeOffre(String email, String code, double proposition) throws EnchereCloseException, EnchereNonDemarreeException, NonInscritException, ArticleInexistantException, ClientInexistantException {
+        // On recupere les objets que l'on va utiliser et on vérifie qu'une offre est possible
         Article article = getArticle(code);
         if (article.getEtatEnchere() == EtatEnchere.TERMINEE){
             throw new EnchereCloseException();
@@ -216,9 +217,11 @@ public class ServiceGestionEncheresBean implements ServiceGestionEncheresLocal, 
             throw new NonInscritException();
         }
 
+        // Si l'offre est possible mais pas interressante
         if (proposition <= article.getPrixMeilleureOffre() || proposition <= article.getPrixInitial() || proposition > acheteur.getPlafond()){
             // On ne fait rien
         } else {
+            //Sinon on ajoute l'offre
             Offre offre = new Offre();
             offre.setDate(new Timestamp((Calendar.getInstance().getTime().getTime())));
             offre.setPrix(proposition);
@@ -227,7 +230,7 @@ public class ServiceGestionEncheresBean implements ServiceGestionEncheresLocal, 
             article.getOffres().add(offre);
             article.setPrixMeilleureOffre(offre.getPrix());
             em.persist(offre);
-
+            //Demarrage du mécanisme d'offre automatique
             gestionOffre(article);
         }
     }

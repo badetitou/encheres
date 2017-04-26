@@ -19,7 +19,7 @@ public class ServiceGestionEncheresBean implements ServiceGestionEncheresLocal, 
 
     /**
      * Ajoute un article dans la base de données. L'enchère correspondant à cet article sera automatiquement
-     * mis à l'état "NON COMMENCEE"
+     * mise à l'état "NON COMMENCEE"
      *
      * @param code        le code unique de l'article
      * @param nom         le nom attribué à l'article
@@ -106,11 +106,11 @@ public class ServiceGestionEncheresBean implements ServiceGestionEncheresLocal, 
     }
 
     /**
-     * Permet de recuperer de manière sécurisée un article ayant un code donné.
+     * Permet de récuperer de manière sécurisée un article ayant un code donné.
      *
      * @param code le code de l'article voulu
      * @return L'article correspondant au code dans la base de données
-     * @throws ArticleInexistantException Erreur si il n'existe aucun article ayant ce code dans la base de données
+     * @throws ArticleInexistantException Erreur s'il n'existe aucun article ayant ce code dans la base de données
      */
     @Override
     public Article getArticle(String code) throws ArticleInexistantException {
@@ -125,8 +125,8 @@ public class ServiceGestionEncheresBean implements ServiceGestionEncheresLocal, 
      *
      * @param code le code de l'article voulu
      * @throws ArticleInexistantException Erreur si l'article n'existe pas
-     * @throws EnchereDejaTerminneeException Erreur si l'article est déjà terminee (et donc dont l'enchere ne peut demarrer)
-     * @throws EnchereDejaEnCoursException Erreur si l'article est déjà en cours (ne peut demarrer deux fois)
+     * @throws EnchereDejaTerminneeException Erreur si l'enchère est déjà terminee (et donc dont l'enchere ne peut demarrer)
+     * @throws EnchereDejaEnCoursException Erreur si l'enchère est déjà en cours (ne peut demarrer deux fois)
      */
     @Override
     public void demarrerEnchere(String code) throws ArticleInexistantException, EnchereDejaEnCoursException, EnchereDejaTerminneeException {
@@ -144,8 +144,8 @@ public class ServiceGestionEncheresBean implements ServiceGestionEncheresLocal, 
      *
      * @param code le code de l'article dont on clore l'enchere
      * @throws ArticleInexistantException Erreur si l'article n'exite pas
-     * @throws EnchereDejaTerminneeException Erreur si l'article est déjà terminee (et donc dont l'enchere ne peut se cloturer deux fois)
-     * @throws EnchereNonDemarreeException Erreur si l'article est n'est pas dans l'etat EN COURS (et ne peut donc pas se cloturer avant)
+     * @throws EnchereDejaTerminneeException Erreur si l'enchère est déjà terminee (et donc dont l'enchere ne peut se cloturer deux fois)
+     * @throws EnchereNonDemarreeException Erreur si l'enchère est n'est pas dans l'etat EN COURS (et ne peut donc pas se cloturer avant)
      */
     @Override
     public void clotureEnchere(String code) throws ArticleInexistantException, EnchereDejaTerminneeException, EnchereNonDemarreeException {
@@ -159,12 +159,12 @@ public class ServiceGestionEncheresBean implements ServiceGestionEncheresLocal, 
     }
 
     /**
-     * Permet d'inscrire un client aux enchere d'un article
+     * Permet d'inscrire un client aux encheres d'un article
      *
      * @param email l'email du client que l'on souhaite inscrire
      * @param code le code de l'article concerné
      * @param prixMax le prix maximum que le client souhaite mettre pour cette session d'enchere
-     * @throws InscriptionImpossibleException Erreur si la date d'inscription est passé (que l'enchere est deja terminee)
+     * @throws InscriptionImpossibleException Erreur si la date d'inscription est passée (que l'enchere est deja terminee)
      * @throws ArticleInexistantException Erreur si l'article concerné n'existe pas
      */
     @Override
@@ -189,11 +189,11 @@ public class ServiceGestionEncheresBean implements ServiceGestionEncheresLocal, 
     }
 
     /**
-     * permet d'ajouter l'offre d'une personne et execute l'ensemble des actions associés.
+     * permet d'ajouter l'offre d'une personne et execute l'ensemble des actions associées.
      *
      * @param email l'email de l'acheteur proposant une offre
      * @param code le code de l'article concerné
-     * @param proposition la somme proposé par la personne
+     * @param proposition la somme proposée par la personne
      * @throws EnchereCloseException Erreur si l'enchere est déjà terminee
      * @throws EnchereNonDemarreeException Erreur si l'enchere n'a pas encore demarree
      * @throws NonInscritException Erreur si le client n'est pas inscrit pour l'enchère de cet article
@@ -236,10 +236,10 @@ public class ServiceGestionEncheresBean implements ServiceGestionEncheresLocal, 
     }
 
     /**
-     * Permet de recuperer un client de manière de sécurisé
+     * Permet de recuperer un client de manière sécurisée
      *
      * @param email l'identifiant unique du client dans la base de données
-     * @return le client de la base de données ayant l'email founi en parametre
+     * @return le client de la base de données ayant l'email founie en parametre
      * @throws ClientInexistantException Erreur si le client n'existe pas dans la base de données
      */
     private Client getClient(String email) throws ClientInexistantException {
@@ -250,7 +250,7 @@ public class ServiceGestionEncheresBean implements ServiceGestionEncheresLocal, 
     }
 
     /**
-     * Permet l'excution interne de la montée des surenchère
+     * Permet l'execution interne de la montée des surenchère
      * @param article l'article pour lequel on va faire la montée des enchères
      */
     private void gestionOffre(Article article){
